@@ -21,36 +21,76 @@ class _SegundaState extends State<Segunda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("resultado")),
+      appBar: AppBar(
+          title: Text(
+            "Resultado",
+            style: TextStyle(
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.bold),
+          ),
+              backgroundColor: Color(0xFFE1BEE7),
+      ),
 
-      body: Center(
+      body: Container(
+        color: Colors.white,
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Jogada do Bot:",
-            style: TextStyle(fontSize: 20)),
-            Image.asset(widget.jogadaBot, height: 100),
+            style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'Roboto')
+            ),
+
+            Image.asset(
+                widget.jogadaBot,
+                height: 120,
+                width: 120,
+                fit: BoxFit.contain,
+            ),
+
             SizedBox(height: 20),
 
             Text("Tua jogada:",
-            style: TextStyle(fontSize: 20)),
-            Image.asset(widget.jogadaMinha, height: 100),
-            SizedBox(height: 20),
+            style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'Roboto')
+            ),
 
+            Image.asset(widget.jogadaMinha,
+              height: 120,
+              width: 120,
+              fit: BoxFit.contain,
+            ),
+            SizedBox(height: 20),
             Text(
-            "tu ${widget.result.contains("vitoria") ? "venceu!" :
+            "Tu ${widget.result.contains("vitoria") ? "venceu!" :
                     widget.result.contains("derrota") ? "perdeu"  :
                     "empatou"}",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 24,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.bold),
             ),
-            Image.asset(widget.result, height: 120),
+
+            Image.asset(widget.result,
+                height: 164,
+                width: 164,
+                fit: BoxFit.contain,
+            ),
             SizedBox(height: 20),
 
             ElevatedButton(onPressed: () => Navigator.pop(context),
-                child: Text("jogar denovo"),
+                child: Text("Jogar denovo",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontFamily: 'Roboto'
+                ),),
             ),
           ],
         ),
+      ),
       ),
     );
   }
