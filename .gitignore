@@ -43,3 +43,27 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.idea/
+*.iml
+
+# Android
+android/.gradle/
+android/app/build/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework
+ios/Flutter/Flutter.podspec
+
+# Outros
+**/test/**.result.json
+*.log
